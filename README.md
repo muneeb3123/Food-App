@@ -127,7 +127,7 @@ No deployment necessary
 
 - GitHub: [@muneeb3123](https://github.com/muneeb3123)
 - Twitter: [@Hafizabd4](https://twitter.com/Hafizabd4)
-- LinkedIn: (https://www.linkedin.com/in/muneeb-rehman-01b6bb193/)
+- LinkedIn:[Linkedin] (https://www.linkedin.com/in/muneeb-rehman-01b6bb193/)
 
 👤 **Larry Villegas**
 - GitHub: [@LarryIVC](https://github.com/LarryIVC)
