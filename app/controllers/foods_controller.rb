@@ -3,14 +3,23 @@
 # Purpose: Controller for the Food model.
 class FoodsController < ApplicationController
   before_action :authenticate_user!, only: %i[new create]
-  
+
   def index
     @foods = Food.all
+    # @food = Food.new
+  end
+
+  def show
+    @food = Food.find(params[:id])
+  end
+
+  def new
     @food = Food.new
   end
 
   def create
-    @food = Food.new(food_params)
+    @user = current_user
+    @food = @user.foods.build(food_params)
     if @food.save
       redirect_to foods_path
     else
@@ -28,6 +37,6 @@ class FoodsController < ApplicationController
   private
 
   def food_params
-    params.require(:food).permit(:name, :calorie)
+    params.require(:food).permit(:name, :measurement_unit, :price, :quantity)
   end
 end
