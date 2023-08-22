@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>FoodApp</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+<head>
+  <title>FoodApp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-    <%= javascript_importmap_tags %>
-  </head>
+  <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+  <%= javascript_importmap_tags %>
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+  <% flash.each do |key, message| %>
+    <div class="flash-message" <%= key %>>
+      <%= message %>
+    </div>
+  <% end %>
+  
+  <div class="login-logout">
+    <% if current_user %>
+      <%= button_to 'Logout', destroy_user_session_path, method: :delete %>
+    <% else %>
+      <%= button_to 'Login', new_user_session_path %>
+    <% end %>
+  </div>
+
+  <%= yield %>
+</body>
 </html>
