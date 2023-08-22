@@ -3,7 +3,6 @@ class FoodsController < ApplicationController
 
   def index
     @foods = Food.all
-    # @food = Food.new
   end
 
   def show
