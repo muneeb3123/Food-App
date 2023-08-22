@@ -58,6 +58,7 @@ group :development do
   gem 'cancancan'
   gem 'devise'
   gem 'letter_opener'
+  gem 'rubocop', '>= 1.0', '< 2.0'
   gem 'web-console'
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
