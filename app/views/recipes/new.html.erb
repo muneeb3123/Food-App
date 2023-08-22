@@ -1,0 +1,28 @@
+<h1>Form to create recipe </h1>
+
+<%= form_for @recipe, data: {turbo: false } do |f| %>
+<div class="field">
+    <%= f.label :name%>
+    <%= f.text_field :name%>
+</div>
+
+<div class="field">
+    <%= f.label :preparation_time%>
+    <%= f.number_field :preparation_time%>
+</div>
+
+<div class="field">
+    <%= f.label :cooking_time%>
+    <%= f.number_field :cooking_time%>
+</div>
+
+<div class="field">
+    <%= f.label :description%>
+    <%= f.text_field :description%>
+</div>
+
+<div class="field">
+    <%= f.submit  "Add Recipe" %>
+</div>
+<% end %>
+
