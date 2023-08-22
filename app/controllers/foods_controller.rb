@@ -1,6 +1,3 @@
-# frozen_string_literal: true
-
-# Purpose: Controller for the Food model.
 class FoodsController < ApplicationController
   before_action :authenticate_user!, only: %i[new create]
 
@@ -21,10 +18,11 @@ class FoodsController < ApplicationController
     @user = current_user
     @food = @user.foods.build(food_params)
     if @food.save
+      flash[:notice] = 'Food  created'
       redirect_to foods_path
     else
-      @foods = Food.all
-      render 'index'
+      flash.now[:alert] = @food.errors.full_messages.join(', ')
+      render :new
     end
   end
 
