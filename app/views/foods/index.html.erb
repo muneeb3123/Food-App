@@ -1,7 +1,7 @@
 <h2>List of foods</h2>
-
-<%= link_to 'Add Food', new_food_path %>
-
+<div class="add-btn">
+  <%= link_to 'Add Food', new_food_path, class: 'button' %>
+</div>
   <table>
   <thead>
     <tr>
@@ -19,7 +19,7 @@
         <td><%= food.measurement_unit %></td>
         <td><%= food.price %></td>
         <td><%= food.quantity %></td>
-        <td><%= button_to 'Delete', food_path(food), method: :delete, data: { confirm: 'Are you sure?' }%></td>
+        <td><%= button_to 'Delete', food_path(food), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %></td>
       </tr>
     <% end %>
   </tbody>

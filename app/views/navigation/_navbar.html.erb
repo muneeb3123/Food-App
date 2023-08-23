@@ -1,0 +1,25 @@
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-menu">
+    <div class="navbar-start">
+      <%= link_to('Home', root_path, class: 'button') %>
+      <%= link_to('Foods', foods_path, class: 'button') %>
+      <%= link_to('Recipe', recipes_path, class: 'button') %>
+    </div>
+
+    <div class="navbar-end">
+      <div class="navbar-item">
+        <div class="buttons">
+          <% if user_signed_in? %>
+            <div class="navbar-item ">
+                <%= current_user.name %>
+                <%= button_to('Logout', destroy_user_session_path, method: :delete, class: 'button') %>
+            </div>
+          <% else %>
+            <%= link_to('Sign up', new_user_registration_path, class: 'button') %>
+            <%= link_to('Log in', new_user_session_path, class: 'button') %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -14,6 +14,12 @@
  *= require_self
  */
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 h2 {
   font-size: 2rem;
   color: #333;
@@ -39,17 +45,6 @@ form {
   padding: 20px;
 }
 
-button {
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #333;
-  color: #fff;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
 table {
   width: 80%;
   margin: 0 auto;
@@ -57,7 +52,7 @@ table {
 }
 
 th {
-  background-color: #333;
+  background-color: hsl(204, 86%, 53%);
   color: #fff;
   padding: 10px;
 }
@@ -71,7 +66,7 @@ tr:nth-child(even) {
 }
 
 td {
-  padding: 10px;
+  padding: 0.5rem;
 }
 
 a {
@@ -83,9 +78,101 @@ a {
   margin: 10px;
 }
 
+.button {
+  background-color: hsl(204, 86%, 53%);
+  border: 1px solid transparent;
+  color: #fff;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+}
+
 .flash-message {
-  font-size: 2rem;
-  color: green;
+  font-size: 1.5rem;
+  background-color: hsl(141, 53%, 53%);
+  color: #fff;
   display: flex;
   justify-content: center;
+  padding: 5px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container {
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: 80%;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(171, 100%, 41%);
+  min-height: 3.25rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.navbar-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1rem;
+  width: 100%;
+}
+
+.title {
+  color: #363636;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.125;
+  text-align: center;
+}
+
+.title p {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.125;
+  text-align: center;
+}
+
+.img-welcome {
+  width: 800px;
+  height: auto;
+  object-fit: cover;
+  max-width: 80%;
+  border-radius: 4px;
+}
+
+.add-btn {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: end;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.check-bx {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
