@@ -1,3 +1,7 @@
+<main>
+  <div class="create-recipe">
+   <%= link_to 'create new', new_recipe_path %>
+  </div>
 <div class="all-recipe">
   <% @recipes.each do |recipe| %>
     <div class="single-recipe">
@@ -13,3 +17,4 @@
     </div>
   <% end %>
 </div>
+</main>
