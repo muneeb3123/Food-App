@@ -174,3 +174,69 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+/* Recipe page styling */
+
+.public-recipe {
+  display: flex;
+  justify-content: center;
+}
+
+.public-recipe h1 {
+  font-size: 3rem;
+  color: rgb(199, 7, 7);
+}
+
+.single-recipe {
+  display: flex;
+  padding: 20px 40px;
+  width: 80%;
+  margin: 30px auto;
+  box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.name-remove {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.recipe-name {
+  color: rgb(252, 99, 11);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.recipe-description {
+  width: 60%;
+}
+
+.recipe-description p {
+  line-height: 1.5rem;
+  color: rgb(95, 99, 99);
+}
+
+.recipe-remove {
+  color: white;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.create-recipe {
+  width: 90%;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+}
+
+.create-recipe-button {
+  color: #fff;
+  background-color: blue;
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+}
