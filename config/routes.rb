@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'users#index'
+  root 'welcome#index'
+
   devise_for :users
 
   resources :foods do
