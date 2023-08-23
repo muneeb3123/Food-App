@@ -1,20 +1,20 @@
 <main>
+  <div class="all-recipe">
   <div class="create-recipe">
-   <%= link_to 'create new', new_recipe_path %>
+   <%= link_to 'create new', new_recipe_path, class: "create-recipe-button" %>
   </div>
-<div class="all-recipe">
   <% @recipes.each do |recipe| %>
     <div class="single-recipe">
       <div class="name-remove">
-        <%= link_to recipe.name, recipe_path(recipe)%>
-        <%= button_to 'Remove', recipe_path(recipe), method: :delete %>
+        <%= link_to recipe.name, recipe_path(recipe), class: "recipe-name"%>
+        <%= button_to 'Remove', recipe_path(recipe), method: :delete, class: "recipe-remove" %>
       </div>
-      <div class="description">
-        <p class="recipe-description">
+      <div class="recipe-description">
+        <p class="description">
           <%= recipe.description %>
         </p>
       </div>
     </div>
-  <% end %>
-</div>
+ <% end %>
+ </div>
 </main>
