@@ -17,15 +17,10 @@
       <%= message %>
     </div>
   <% end %>
-  
-  <div class="login-logout">
-    <% if current_user %>
-      <%= button_to 'Logout', destroy_user_session_path, method: :delete %>
-    <% else %>
-      <%= button_to 'Login', new_user_session_path %>
-    <% end %>
-  </div>
 
-  <%= yield %>
+  <div class="container">
+    <%= render "navigation/navbar"%>
+    <%= yield %>
+  </div>
 </body>
 </html>
