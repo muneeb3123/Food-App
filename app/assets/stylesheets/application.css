@@ -76,7 +76,6 @@ a {
 .button {
   background-color: hsl(204, 86%, 53%);
   margin: 10px;
-
   border: 1px solid transparent;
   border-radius: 4px;
   color: #fff;
@@ -173,4 +172,117 @@ a {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+/* Recipe page styling */
+
+.public-recipe {
+  display: flex;
+  justify-content: center;
+}
+
+.public-recipe h1 {
+  font-size: 3rem;
+  color: rgb(199, 7, 7);
+}
+
+.single-recipe {
+  display: flex;
+  padding: 20px 40px;
+  width: 80%;
+  margin: 30px auto;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.name-remove {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.recipe-name {
+  color: rgb(252, 99, 11);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.recipe-description {
+  width: 65%;
+}
+
+.recipe-description p {
+  line-height: 1.5rem;
+  color: rgb(95, 99, 99);
+}
+
+.recipe-remove {
+  color: white;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.create-recipe {
+  width: 90%;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+}
+
+.create-recipe-button {
+  color: #fff;
+  background-color: blue;
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.name-header {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.name-header h1 {
+  font-size: 2.5rem;
+}
+
+.times {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+}
+
+.recipe-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.detail-and-toogle {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.toogle-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btnToggle {
+  color: rgb(91, 145, 10);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.underline {
+  border-bottom: 1px solid black;
+  margin: 3rem;
 }

@@ -3,10 +3,23 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all
   end
 
-  def show; end
+  def show
+    @recipe = Recipe.find(params[:id])
+    @recipe_foods = @recipe.recipe_foods.includes(:food)
+  end
 
   def new
     @recipe = Recipe.new
+  end
+
+  def public
+    @recipes = Recipe.where(public: true).order(created_at: :desc)
+  end
+
+  def toggle_public
+    @recipe = Recipe.find(params[:id])
+    @recipe.update(public: !@recipe.public)
+    redirect_to recipe_path, notice: 'successfully updated'
   end
 
   def create

@@ -1,7 +1,6 @@
 <main>
-  <div class="all-recipe">
-  <div class="create-recipe">
-   <%= link_to 'create new', new_recipe_path, class: "create-recipe-button" %>
+  <div class="public-recipe">
+    <h1>Public Recipes</h1>
   </div>
   <% @recipes.each do |recipe| %>
     <div class="single-recipe">
