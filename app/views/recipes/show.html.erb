@@ -1,2 +1,28 @@
-<h1>Recipes#show</h1>
-<p>Find me in app/views/recipes/show.html.erb</p>
+<main>
+  <div class="detail-page">
+    <div class="name-header">
+      <h1><%= @recipe.name %></h1>
+    </div>
+    <div class="detail-and-toogle">
+      <div class="recipe-details">
+        <p class="times"><strong>Preparation time:</strong> <%= @recipe.preparation_time %> minutes</p>
+        <p class="times"><strong>Cooking time:</strong> <%= @recipe.cooking_time %> minutes</p>
+        <div class="recipe-description">
+          <p class="description"><%= @recipe.description %></p>
+        </div>
+        </div>
+        <div class="toogle-button">
+           <p> <strong>Public:</strong></p>
+          <% if current_user == @recipe.user %>
+            <%= button_to toggle_public_recipe_path(@recipe), method: :patch, class: "btnToggle" do %>
+              <%= @recipe.public ? 'Yes' : 'No' %>
+            <% end %>
+          <% end %>
+        </div>
+    </div>
+    <div class="underline"></div>
+    <div class="add-ingredient">
+        <%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe) %>
+    </div>
+  </div>
+</main>
