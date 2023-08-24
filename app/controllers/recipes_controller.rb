@@ -6,7 +6,7 @@ class RecipesController < ApplicationController
   def show
     @recipe = Recipe.find(params[:id])
     @recipe_foods = @recipe.recipe_foods.includes(:food)
-   end
+  end
 
   def new
     @recipe = Recipe.new
@@ -19,7 +19,7 @@ class RecipesController < ApplicationController
   def toggle_public
     @recipe = Recipe.find(params[:id])
     @recipe.update(public: !@recipe.public)
-   redirect_to recipe_path, notice: 'successfully updated'
+    redirect_to recipe_path, notice: 'successfully updated'
   end
 
   def create
