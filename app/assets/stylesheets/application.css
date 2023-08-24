@@ -197,7 +197,7 @@ a {
 }
 
 .name-remove {
-  width: 30%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -210,7 +210,7 @@ a {
 }
 
 .recipe-description {
-  width: 60%;
+  width: 65%;
 }
 
 .recipe-description p {
