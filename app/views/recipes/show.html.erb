@@ -24,6 +24,7 @@
     <% if @recipe.user == current_user %>
     <div class="add-ingredient">
         <%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe), class: 'button' %>
+        <%= link_to 'Generate shopping lists', shopping_lists_path, class: 'button'%>
     </div>
     <%end%>
      <% if @recipe.user == current_user || @recipe.public%>
