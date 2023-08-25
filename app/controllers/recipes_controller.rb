@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
-before_action :authenticate_user!, only: [:new , :destroy ,  :create]
-load_and_authorize_resource
+  before_action :authenticate_user!, only: %i[new destroy create]
+  load_and_authorize_resource
 
   def index
     @recipes = Recipe.includes(:user).all

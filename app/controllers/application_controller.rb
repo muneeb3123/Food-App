@@ -1,7 +1,6 @@
 class ApplicationController < ActionController::Base
-
-  rescue_from CanCan::AccessDenied do |exception|
-    flash[:alert] = "You are not authorized to perform this action."
+  rescue_from CanCan::AccessDenied do |_exception|
+    flash[:alert] = 'You are not authorized to perform this action.'
     redirect_to request.referer || root_path
   end
 
