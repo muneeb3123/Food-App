@@ -4,7 +4,6 @@ RSpec.describe User, type: :model do
   # create a subjet user
   subject { User.new(name: 'Test User', email: 'test@mail.com', role: 'admin') }
 
-
   before { subject.save }
 
   it 'name should be present' do

@@ -37,5 +37,5 @@ RSpec.describe Food, type: :model do
 
     food.quantity = -1
     expect(food).not_to be_valid
-  end  
+  end
 end
