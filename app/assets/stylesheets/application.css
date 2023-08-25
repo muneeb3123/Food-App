@@ -13,3 +13,307 @@
  *= require_tree .
  *= require_self
  */
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin: 20px 0;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.devise_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+th {
+  background-color: hsl(204, 86%, 53%);
+  color: #fff;
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ccc;
+}
+
+td {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+}
+
+tr {
+  border: 1px solid #ccc;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  background-color: hsl(204, 86%, 53%);
+  margin: 10px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.flash-message {
+  font-size: 1.5rem;
+  background-color: hsl(141, 53%, 53%);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  padding: 5px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.container {
+  flex-grow: 1;
+  margin: 0 auto;
+  position: relative;
+  width: 80%;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: hsl(171, 100%, 41%);
+  min-height: 3.25rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.navbar-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 1rem;
+  width: 100%;
+}
+
+.title {
+  color: #363636;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.125;
+  text-align: center;
+}
+
+.title p {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.125;
+  text-align: center;
+}
+
+.img-welcome {
+  width: 800px;
+  height: auto;
+  object-fit: cover;
+  max-width: 80%;
+  border-radius: 4px;
+}
+
+.add-btn {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: end;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.check-bx {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Recipe page styling */
+
+.public-recipe {
+  display: flex;
+  justify-content: center;
+}
+
+.public-recipe h1 {
+  font-size: 3rem;
+  color: rgb(199, 7, 7);
+}
+
+.single-recipe {
+  display: flex;
+  padding: 20px 40px;
+  width: 80%;
+  margin: 30px auto;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.name-remove {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.recipe-name {
+  color: rgb(252, 99, 11);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.recipe-description {
+  width: 65%;
+}
+
+.recipe-description p {
+  line-height: 1.5rem;
+  color: rgb(95, 99, 99);
+}
+
+.recipe-remove {
+  color: white;
+  background-color: red;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+}
+
+.create-recipe {
+  width: 90%;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 20px;
+}
+
+.create-recipe-button {
+  color: #fff;
+  background-color: blue;
+  width: 100px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.name-header {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+.name-header h1 {
+  font-size: 2.5rem;
+}
+
+.times {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.5rem;
+}
+
+.recipe-details {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.detail-and-toogle {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.toogle-button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.btnToggle {
+  color: rgb(91, 145, 10);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.underline {
+  border-bottom: 1px solid black;
+  margin: 3rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.add-ingredient {
+  display: flex;
+  gap: 50px;
+  width: 80%;
+  margin: 40px auto;
+}
+
+.shopping-list {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.shopping-list h1 {
+  font-size: 2.5rem;
+}
+
+.shopping-details {
+  width: 80%;
+  margin: 50px auto;
+}

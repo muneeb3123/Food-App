@@ -1,0 +1,19 @@
+<main>
+  <div class="public-recipe">
+    <h1>Public Recipes</h1>
+  </div>
+  <% @recipes.each do |recipe| %>
+    <div class="single-recipe">
+      <div class="name-remove">
+        <%= link_to recipe.name, recipe_path(recipe), class: "recipe-name"%>
+        <p class="recipe-owner">by :<%= recipe.user.name %></p>
+      </div>
+      <div class="recipe-description">
+        <p class="description">
+          <%= recipe.description %>
+        </p>
+      </div>
+    </div>
+ <% end %>
+ </div>
+</main>

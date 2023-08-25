@@ -1,0 +1,21 @@
+<main>
+  <div class="all-recipe">
+  <h2 class="title">All Recipes</h2>
+  <div class="create-recipe">
+   <%= link_to 'create new', new_recipe_path, class: "create-recipe-button" %>
+  </div>
+  <% @recipes.each do |recipe| %>
+    <div class="single-recipe">
+      <div class="name-remove">
+        <%= link_to recipe.name, recipe_path(recipe), class: "recipe-name"%>
+        <%= button_to 'Remove', recipe_path(recipe), method: :delete, class: "recipe-remove" %>
+      </div>
+      <div class="recipe-description">
+        <p class="description">
+          <%= recipe.description %>
+        </p>
+      </div>
+    </div>
+ <% end %>
+ </div>
+</main>
