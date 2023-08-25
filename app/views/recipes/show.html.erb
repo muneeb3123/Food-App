@@ -12,8 +12,8 @@
         </div>
         </div>
         <div class="toogle-button">
-           <p> <strong>Public:</strong></p>
           <% if current_user == @recipe.user %>
+           <p> <strong>Public:</strong></p>
             <%= button_to toggle_public_recipe_path(@recipe), method: :patch, class: "btnToggle" do %>
               <%= @recipe.public ? 'Yes' : 'No' %>
             <% end %>
@@ -21,9 +21,12 @@
         </div>
     </div>
     <div class="underline"></div>
+    <% if @recipe.user == current_user %>
     <div class="add-ingredient">
-        <%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe) %>
+        <%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe), class: 'button' %>
     </div>
+    <%end%>
+     <% if @recipe.user == current_user || @recipe.public%>
     <table>
       <thead>
         <tr>
@@ -49,5 +52,6 @@
         <%end%>
       </tbody>
     </table>
+    <%end%>
   </div>
 </main>

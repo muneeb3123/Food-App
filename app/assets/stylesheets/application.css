@@ -298,3 +298,8 @@ a {
   align-items: center;
   gap: 10px;
 }
+
+.add-ingredient {
+  width: 80%;
+  margin: 40px auto;
+}
