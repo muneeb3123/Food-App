@@ -57,11 +57,12 @@ th {
   padding: 10px;
   text-align: left;
   border: 1px solid #ccc;
- }
+}
 
- td {
+td {
   border: 1px solid #ccc;
- }
+  padding: 0.5rem;
+}
 
 tr {
   border: 1px solid #ccc;
@@ -69,10 +70,6 @@ tr {
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
-}
-
-td {
-  padding: 0.5rem;
 }
 
 a {
