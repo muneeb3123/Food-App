@@ -300,6 +300,23 @@ a {
 }
 
 .add-ingredient {
+  display: flex;
+  gap: 50px;
   width: 80%;
   margin: 40px auto;
+}
+
+.shopping-list {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.shopping-list h1 {
+  font-size: 2.5rem;
+}
+
+.shopping-details {
+  width: 80%;
+  margin: 50px auto;
 }
