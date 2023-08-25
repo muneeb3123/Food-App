@@ -1,5 +1,6 @@
 class FoodsController < ApplicationController
-  before_action :authenticate_user!, only: %i[new create]
+  before_action :authenticate_user!, only: %i[new create destroy]
+  load_and_authorize_resource
 
   def index
     @foods = Food.includes(:user).all
