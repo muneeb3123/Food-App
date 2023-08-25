@@ -24,12 +24,30 @@
     <div class="add-ingredient">
         <%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe) %>
     </div>
-    <div class="list">
-      <% @recipe_foods.each do |r|%>
-      <p><%= r.food.name %></p>
-      <p><%= r.quantity %></p>
-      <p><%= r.food.price %></p>
-      <% end%>
-    </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Food</th>
+          <th>Quantity</th>
+          <th>Value</th>
+          <th>Actions</th>
+          </tr>
+      </thead>
+      <tbody>
+       <% @recipe_foods.each do |r|%>
+        <tr>
+          <td><%= r.food.name%></td>
+          <td><%= r.quantity %> <%=r.food.measurement_unit%></td>
+          <td>
+            <%= r.quantity * r.food.price.to_i %> $
+            </td>
+          <td class="actions">
+            <%= button_to 'Remove', recipe_recipe_food_path(@recipe, r), method: :delete , class: "recipe-remove"%>
+            <%= link_to 'Edit', edit_recipe_recipe_food_path(@recipe, r), class: 'button'%>
+            </td>
+        </tr>
+        <%end%>
+      </tbody>
+    </table>
   </div>
 </main>
