@@ -1,5 +1,9 @@
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
+
+  rescue_from CanCan::AccessDenied do |exception|
+    flash[:alert] = "You are not authorized to perform this action."
+    redirect_to request.referer || root_path
+  end
 
   protect_from_forgery with: :exception
 
