@@ -46,8 +46,4 @@ class RecipeFoodsController < ApplicationController
   def recipe_food_params
     params.require(:recipe_food).permit(:quantity, :food_id, :recipe_id)
   end
-
-  def update_params
-    params.require(:recipe_food).permit(:quantity, :food_id, :recipe_id)
-  end
 end
