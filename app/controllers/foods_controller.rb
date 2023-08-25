@@ -2,7 +2,7 @@ class FoodsController < ApplicationController
   before_action :authenticate_user!, only: %i[new create]
 
   def index
-    @foods = Food.all
+    @foods = Food.includes(:user).all
   end
 
   def show
