@@ -6,7 +6,7 @@
     <div class="single-recipe">
       <div class="name-remove">
         <%= link_to recipe.name, recipe_path(recipe), class: "recipe-name"%>
-        <%= button_to 'Remove', recipe_path(recipe), method: :delete, class: "recipe-remove" %>
+        <p class="recipe-owner">by :<%= recipe.user.name %></p>
       </div>
       <div class="recipe-description">
         <p class="description">

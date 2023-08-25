@@ -1,0 +1,10 @@
+<%= form_for [@recipe, @recipe_food], data: { turbo: false } do |f| %>
+<div class="field">
+    <%= f.label :quantity %>
+    <%= f.number_field :quantity %>
+  </div>
+
+  <div class="field">
+    <%= f.submit 'Update' %>
+  </div>
+<% end %>
