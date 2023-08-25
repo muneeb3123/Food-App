@@ -4,7 +4,7 @@ class ShoppingListsController < ApplicationController
     @remaining_foods = Hash.new(0)
     @needed_foods = {}
 
-    current_user.recipes.each do |recipe|
+    current_user.recipes.includes(recipe_foods: :food).each do |recipe|
       recipe.recipe_foods.includes(:food).each do |recipe_food|
         food = recipe_food.food
         @remaining_foods[food] += recipe_food.quantity

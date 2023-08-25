@@ -12,11 +12,9 @@
         </div>
         </div>
         <div class="toogle-button">
-          <% if current_user == @recipe.user %>
            <p> <strong>Public:</strong></p>
             <%= button_to toggle_public_recipe_path(@recipe), method: :patch, class: "btnToggle" do %>
               <%= @recipe.public ? 'Yes' : 'No' %>
-            <% end %>
           <% end %>
         </div>
     </div>

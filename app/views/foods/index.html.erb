@@ -19,9 +19,7 @@
         <td><%= food.measurement_unit %></td>
         <td><%= food.price %></td>
         <td><%= food.quantity %></td>
-        <% if food.user == current_user%>
         <td><%= button_to 'Delete', food_path(food), method: :delete, data: { confirm: 'Are you sure?' }, class: 'button' %></td>
-        <%end%>
       </tr>
     <% end %>
   </tbody>

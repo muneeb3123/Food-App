@@ -8,9 +8,7 @@
     <div class="single-recipe">
       <div class="name-remove">
         <%= link_to recipe.name, recipe_path(recipe), class: "recipe-name"%>
-        <% if recipe.user == current_user%>
         <%= button_to 'Remove', recipe_path(recipe), method: :delete, class: "recipe-remove" %>
-        <%end%>
       </div>
       <div class="recipe-description">
         <p class="description">

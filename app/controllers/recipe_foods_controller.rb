@@ -1,4 +1,6 @@
 class RecipeFoodsController < ApplicationController
+  before_action :authenticate_user!
+  load_and_authorize_resource
   def new
     @recipe = Recipe.find(params[:recipe_id])
     @recipe_food = RecipeFood.new
@@ -44,10 +46,6 @@ class RecipeFoodsController < ApplicationController
   private
 
   def recipe_food_params
-    params.require(:recipe_food).permit(:quantity, :food_id, :recipe_id)
-  end
-
-  def update_params
     params.require(:recipe_food).permit(:quantity, :food_id, :recipe_id)
   end
 end
