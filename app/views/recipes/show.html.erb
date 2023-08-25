@@ -24,12 +24,5 @@
     <div class="add-ingredient">
         <%= link_to 'Add ingredient', new_recipe_recipe_food_path(@recipe) %>
     </div>
-    <div class="list">
-      <% @recipe_foods.each do |r|%>
-        <p><%= r.food.name %></p>
-        <p><%= r.quantity %></p>
-        <p><%= r.food.price %></p>
-      <% end%>
-    </div>
   </div>
 </main>
