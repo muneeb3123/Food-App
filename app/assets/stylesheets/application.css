@@ -55,10 +55,16 @@ th {
   background-color: hsl(204, 86%, 53%);
   color: #fff;
   padding: 10px;
-}
+  text-align: left;
+  border: 1px solid #ccc;
+ }
+
+ td {
+  border: 1px solid #ccc;
+ }
 
 tr {
-  border-bottom: 1px solid #ccc;
+  border: 1px solid #ccc;
 }
 
 tr:nth-child(even) {
@@ -285,4 +291,10 @@ a {
 .underline {
   border-bottom: 1px solid black;
   margin: 3rem;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
