@@ -11,6 +11,6 @@ Rails.application.routes.draw do
     member do
       patch :toggle_public
     end
-    resources :recipe_foods
+    resources :recipe_foods, only: [:new, :create, :destroy, :edit, :update]
   end
 end
