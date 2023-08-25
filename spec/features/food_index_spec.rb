@@ -56,4 +56,23 @@ describe 'Food Index', type: :feature do
     expect(page).to have_content 12
     expect(page).to have_content 23
   end
+
+  it 'I can remove a food' do
+    visit foods_path
+    first('.row-food .button').click
+    expect(page).to_not have_content 'Food 1'
+  end
+
+  it 'I can add a food' do
+    visit foods_path
+    click_link 'Add Food'
+    # on the new page
+    fill_in 'Name', with: 'Food 3'
+    fill_in 'Measurement unit', with: 'kg'
+    fill_in 'Price', with: 12
+    fill_in 'Quantity', with: 23
+    click_button 'Add food'
+    # return to the foods page
+    expect(page).to have_content 'Food 3'
+  end
 end
